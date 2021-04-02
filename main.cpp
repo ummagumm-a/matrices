@@ -2,6 +2,8 @@
 #include "Matrix.h"
 #include "SquareMatrix.h"
 #include "Identity.h"
+#include "EliminationMatrix.h"
+#include "PermutationMatrix.h"
 
 using namespace std;
 
@@ -21,9 +23,10 @@ int main() {
 //    cin >> c;
 
     cin >> n;
-    Identity i(n);
-    cout << i << endl;
-    cout << i.transposed() << endl;
+    PermutationMatrix p(n, 0, n - 1);
+    cout << p << endl;
+
+
 
 //
 //    try

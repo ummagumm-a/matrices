@@ -8,4 +8,5 @@ add_executable(AGLA_II main.cpp
         SquareMatrix.cpp SquareMatrix.h
         Identity.cpp Identity.h
         EliminationMatrix.cpp EliminationMatrix.h
+        PermutationMatrix.cpp PermutationMatrix.h
         )
