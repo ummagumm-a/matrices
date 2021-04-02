@@ -7,10 +7,19 @@
 
 #include "SquareMatrix.h"
 
-class Identity : public SquareMatrix
+template <typename T>
+class Identity : public SquareMatrix<T>
 {
 public:
-    explicit Identity(int n);
+    explicit Identity(int n)
+        :
+        SquareMatrix<T>(n)
+    {
+        for (int i = 0; i < n; ++i)
+        {
+            SquareMatrix<T>::setElementAt(i, i, static_cast<T>(1));
+        }
+    }
 };
 
 

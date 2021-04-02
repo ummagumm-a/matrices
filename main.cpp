@@ -10,23 +10,22 @@ using namespace std;
 int main() {
     int n;
 
-//    cin >> n;
-//    SquareMatrix a(n);
-//    cin >> a;
-//
-//    cin >> n;
-//    SquareMatrix b(n);
-//    cin >> b;
-//
-//    cin >> n;
-//    SquareMatrix c(n);
-//    cin >> c;
-
     cin >> n;
-    PermutationMatrix p(n, 0, n - 1);
+    SquareMatrix<double> a(n);
+    cin >> a;
+
+    EliminationMatrix<double> elim21A(
+            n, 1, 0, - a.getElementAt(1, 0) / (double) a.getElementAt(0, 0)
+            );
+    cout << elim21A << endl;
+
+    auto b = elim21A * a;
+    cout << b << endl;
+
+    PermutationMatrix<int> p(n, 0, 1);
     cout << p << endl;
 
-
+    cout << p * a << endl;
 
 //
 //    try

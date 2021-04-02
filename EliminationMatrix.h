@@ -7,9 +7,15 @@
 
 #include "Identity.h"
 
-class EliminationMatrix : public Identity {
+template <typename T>
+class EliminationMatrix : public Identity<T> {
 public:
-    EliminationMatrix(int dimension, int row, int column, int value);
+    EliminationMatrix(int dimension, int row, int column, T value)
+        :
+        Identity<T>(dimension)
+    {
+        Identity<T>::setElementAt(row, column, value);
+    }
 };
 
 

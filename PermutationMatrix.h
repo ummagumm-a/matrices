@@ -7,10 +7,20 @@
 
 #include "Identity.h"
 
-class PermutationMatrix : public Identity
+template <typename T>
+class PermutationMatrix : public Identity<T>
 {
 public:
-    PermutationMatrix(int dimension, int row1, int row2);
+    PermutationMatrix(int dimension, int row1, int row2)
+        :
+        Identity<T>(dimension)
+    {
+        Identity<T>::setElementAt(row1, row1, static_cast<T>(0));
+        Identity<T>::setElementAt(row2, row2, static_cast<T>(0));
+
+        Identity<T>::setElementAt(row1, row2, static_cast<T>(1));
+        Identity<T>::setElementAt(row2, row1, static_cast<T>(1));
+    }
 };
 
 

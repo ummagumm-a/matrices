@@ -3,16 +3,14 @@
 //
 
 #include "Identity.h"
-
-Identity::Identity(int n)
-    :
-    SquareMatrix(n)
-{
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = 0; j < n; ++j) {
-            if (i == j) setElementAt(i, j, 1);
-            else setElementAt(i, j, 0);
-        }
-    }
-}
+//
+//template <typename T>
+//Identity<T>::Identity(int n)
+//    :
+//    SquareMatrix<T>(n)
+//{
+//    for (int i = 0; i < n; ++i)
+//    {
+//        Identity<T>::setElementAt(i, i, static_cast<T>(1));
+//    }
+//}

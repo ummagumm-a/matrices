@@ -7,7 +7,8 @@
 
 #include "Matrix.h"
 
-class SquareMatrix : public Matrix {
+template <typename T>
+class SquareMatrix : public Matrix<T> {
 private:
     class DimensionalProblemException : public std::exception
     {
@@ -18,13 +19,14 @@ private:
     };
 public:
     // Constructor for Matrix which sets its dimensions
-    explicit SquareMatrix(int n);
-    // Copy constructor
-    SquareMatrix(SquareMatrix& rhs);
+    explicit SquareMatrix(int n)
+        :
+        Matrix<T>(n, n)
+    {}
 
     [[nodiscard]] int dimension() const
     {
-        return getNColumns();
+        return Matrix<T>::getNColumns();
     }
 };
 

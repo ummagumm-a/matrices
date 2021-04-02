@@ -1,12 +1,13 @@
+////
+//// Created by ummagumm_a on 02.04.2021.
+////
 //
-// Created by ummagumm_a on 02.04.2021.
+//#include "EliminationMatrix.h"
 //
-
-#include "EliminationMatrix.h"
-
-EliminationMatrix::EliminationMatrix(int dimension, int row, int column, int value)
-    :
-    Identity(dimension)
-{
-    setElementAt(row, column, value);
-}
+//template <typename T>
+//EliminationMatrix<T>::EliminationMatrix(int dimension, int row, int column, T value)
+//    :
+//    Identity<T>(dimension)
+//{
+//    Identity<T>::setElementAt(row, column, value);
+//}
