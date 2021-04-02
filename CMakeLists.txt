@@ -3,4 +3,8 @@ project(AGLA_II)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(AGLA_II main.cpp Matrix.cpp Matrix.h SquareMatrix.cpp SquareMatrix.h)
+add_executable(AGLA_II main.cpp
+        Matrix.cpp Matrix.h
+        SquareMatrix.cpp SquareMatrix.h
+        Identity.cpp Identity.h
+        )
