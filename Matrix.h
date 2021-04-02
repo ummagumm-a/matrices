@@ -24,7 +24,7 @@ public:
     // Constructor for Matrix which sets its dimensions
     Matrix(int rows, int columns);
     // Copy constructor
-    explicit Matrix(Matrix& rhs);
+    Matrix(Matrix& rhs);
 
     // Copy assignment operator
     Matrix& operator=(const Matrix& rhs);
@@ -44,7 +44,7 @@ public:
     friend std::ostream& operator<<(std::ostream& out, const Matrix& rhs);
 
     // Transpose matrix
-    [[nodiscard]] Matrix* transposed() const;
+    [[nodiscard]] Matrix transposed() const;
 
 public:
     // Getters

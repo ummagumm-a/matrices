@@ -199,17 +199,19 @@ Matrix& Matrix::operator*=(const Matrix& rhs)
     return *this;
 }
 
-Matrix* Matrix::transposed() const
+Matrix Matrix::transposed() const
 {
-    const auto transposedMatrix = new Matrix(nColumns, nRows);
+    auto transposedMatrix = new Matrix(nColumns, nRows);
 
-    for (int i = 0; i < nColumns; ++i) {
-        for (int j = 0; j < nRows; ++j) {
+    for (int i = 0; i < nColumns; ++i)
+    {
+        for (int j = 0; j < nRows; ++j)
+        {
             transposedMatrix->setElementAt(i, j, contents[j][i]);
         }
     }
 
-    return transposedMatrix;
+    return *transposedMatrix;
 
 }
 
