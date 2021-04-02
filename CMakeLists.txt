@@ -7,4 +7,5 @@ add_executable(AGLA_II main.cpp
         Matrix.cpp Matrix.h
         SquareMatrix.cpp SquareMatrix.h
         Identity.cpp Identity.h
+        EliminationMatrix.cpp EliminationMatrix.h
         )
